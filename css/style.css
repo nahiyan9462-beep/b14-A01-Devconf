@@ -1,7 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
-
+    box-sizing: border-box;
 
 }
 html{
@@ -11,43 +11,41 @@ html{
 body{
 
     background-color: #fff;
+    width: 100%;
 
 }
 
 /* navbar */
 header{
     width: 100%;
-    background: #222;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
     
 }
 .navbar{
 
-    position: fixed;
-    top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    padding: 20px 50px;
+    width: 100%;
+    padding: 40px 60px;
+    margin-top: auto;
 }
 
-span{
+.navbar span{
 
     letter-spacing: 1px;
 }
-ul{
+.navbar ul{
 
     display: flex;
     list-style: none;
     gap: 10px;
 
 }
-ul li{
+.navbar ul li{
 
     position: relative;
 }
-ul li a{
+.navbar ul li a{
 
     text-decoration: none;
     font-size: 20px;
@@ -56,7 +54,7 @@ ul li a{
     padding: 12px 20px;
     color: #333;
 }    
-ul li a:hover{
+.navbar ul li a:hover{
 
     background-color: purple;
     padding: 12px 25px;
@@ -82,3 +80,226 @@ ul li a:hover{
       transform: translateY(-3px);
       box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
 }
+
+/* End navbar */
+
+/* start banner */
+
+.banner-parent{
+    position: relative;
+    width:100%;
+    height: 800px;
+    margin-top: 80px;
+    background-position:center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.overlay{
+
+    position: absolute;
+    width: 100%;
+} 
+
+.banner-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    color:#fff;
+    padding:20px;
+}
+
+.banner-content h1{
+    font-size:70px;
+    font-weight:700;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.banner-content p{
+    font-size:20px;
+    line-height:1.8;
+    color:#ddd;
+    margin-bottom:40px;
+}
+
+/* end banner */
+
+/* start pricing */
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.heading h1{
+    font-size:56px;
+    color:#08123f;
+    margin-bottom:15px;
+}
+
+.heading p{
+    color:#666;
+    font-size:18px;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:350px;
+    background:#fff;
+    border-radius:16px;
+    padding:35px;
+    border:1px solid #e5e5e5;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+.active{
+    background:#071228;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+.plan{
+    font-size:14px;
+    color:#888;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.card h2{
+    font-size:60px;
+    margin:15px 0 5px;
+    color:#08123f;
+}
+
+.active h2{
+    color:#fff;
+}
+
+small{
+    color:#777;
+}
+
+ul{
+    list-style:none;
+    margin:35px 0;
+}
+
+ul li{
+    margin:18px 0;
+    color:#444;
+    position:relative;
+    padding-left:20px;
+}
+
+ul li::before{
+    content: url(.);
+    color:#2d8cff;
+    position:absolute;
+    left:0;
+    font-size:20px;
+}
+
+.contact-btn{
+
+    text-decoration: none;
+    width: 100%;
+    padding: 13px 28px;
+    border-radius: 40px;
+    transition: .35s;
+    font-size: 20px;
+    box-shadow: #222;
+    cursor: pointer;
+    color: #fff;
+    background-color: #2563EB;
+
+
+    
+}
+.contact-btn:hover{
+      background: #0F172A;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+}
+
+/* end pricing */
+
+/* footer */
+
+.footer{
+     
+    background-color: #071228;
+    color: #fff;
+    padding: 80px 8%;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.logo h2{
+    font-size:30px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#29B6F6;
+}
+.logo p{
+    color:#9ca3af;
+    font-size:15px;
+    letter-spacing:.5px;
+}
+
+.social-icons{
+    display:flex;
+    gap:18px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#1f2937;
+    color:#fff;
+    text-decoration:none;
+    border-radius: 8px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#29B6F6;
+    transform:translateY(-2px);
+}
+
+
+/* end footer */
